@@ -58,7 +58,7 @@ app.post('/api/users', (req, res) => {
         return res.status(404).json(jsonRespond);
     }
 
-    console.log('Email ' + req.body.email + ' has been registered.');
+    console.log('Email ' + req.body.email + ' has been registered.\n');
     const user = {
         id: users.length + 1,
         name: req.body.name,
@@ -115,7 +115,7 @@ app.get('/api/users/:email/:password', (req, res) => {
         return res.status(404).json(jsonRespond);
     }
 
-    console.log('Email ' + req.params.email + ' sucessfully login.');
+    console.log('Email ' + req.params.email + ' sucessfully login.\n');
     var jsonRespond = {
         result: users,
         message: "Successfully Login!"
